@@ -1,0 +1,11 @@
+[Unit]
+Description=RFID Scanner Service
+
+[Service]
+ExecStart=/usr/bin/python3 /path/to/rfid_scanner.py
+Restart=on-failure
+StandardOutput=syslog
+StandardError=syslog
+
+[Install]
+WantedBy=multi-user.target
